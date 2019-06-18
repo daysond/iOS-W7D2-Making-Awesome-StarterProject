@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +28,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T74-tf-Bc1" userLabel="TextView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="1L5-su-65t">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="1L5-su-65t">
                                                 <rect key="frame" x="8" y="8" width="398" height="168"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="400"/>
                                                 <nil key="textColor"/>
@@ -45,12 +43,48 @@
                                             <constraint firstAttribute="trailing" secondItem="1L5-su-65t" secondAttribute="trailing" constant="8" id="zsU-c9-xzu"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAo-3s-X9N" userLabel="ButtonContainer">
+                                        <rect key="frame" x="0.0" y="184" width="414" height="184"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNq-aM-Y0w" userLabel="snow">
+                                                <rect key="frame" x="8" y="28" width="128" height="128"/>
+                                                <state key="normal" backgroundImage="shower"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kv-cb-TTB" userLabel="rain">
+                                                <rect key="frame" x="143" y="28" width="128" height="128"/>
+                                                <state key="normal" backgroundImage="Snow"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-eh-yZI" userLabel="thunder">
+                                                <rect key="frame" x="278" y="28" width="128" height="128"/>
+                                                <state key="normal" backgroundImage="thunder"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="0Kv-cb-TTB" firstAttribute="centerY" secondItem="VAo-3s-X9N" secondAttribute="centerY" id="1YG-ua-CJR"/>
+                                            <constraint firstItem="RNq-aM-Y0w" firstAttribute="width" secondItem="VAo-3s-X9N" secondAttribute="height" constant="-56" id="7mH-cw-XSq"/>
+                                            <constraint firstItem="RNq-aM-Y0w" firstAttribute="centerY" secondItem="VAo-3s-X9N" secondAttribute="centerY" id="E3F-bK-J70"/>
+                                            <constraint firstItem="Feg-eh-yZI" firstAttribute="height" secondItem="RNq-aM-Y0w" secondAttribute="height" id="E3a-bI-pZx"/>
+                                            <constraint firstItem="0Kv-cb-TTB" firstAttribute="centerX" secondItem="VAo-3s-X9N" secondAttribute="centerX" id="IyW-rX-CMI"/>
+                                            <constraint firstItem="Feg-eh-yZI" firstAttribute="centerY" secondItem="VAo-3s-X9N" secondAttribute="centerY" id="JcM-V0-73M"/>
+                                            <constraint firstAttribute="trailing" secondItem="Feg-eh-yZI" secondAttribute="trailing" constant="8" id="O7j-Nq-rqn"/>
+                                            <constraint firstItem="Feg-eh-yZI" firstAttribute="width" secondItem="RNq-aM-Y0w" secondAttribute="width" id="OQs-mZ-l6v"/>
+                                            <constraint firstItem="0Kv-cb-TTB" firstAttribute="height" secondItem="RNq-aM-Y0w" secondAttribute="height" id="YIu-Gf-jxB"/>
+                                            <constraint firstItem="RNq-aM-Y0w" firstAttribute="height" secondItem="VAo-3s-X9N" secondAttribute="height" constant="-56" id="eUU-Q2-9de"/>
+                                            <constraint firstItem="RNq-aM-Y0w" firstAttribute="leading" secondItem="VAo-3s-X9N" secondAttribute="leading" constant="8" id="knR-Qu-bMy"/>
+                                            <constraint firstItem="0Kv-cb-TTB" firstAttribute="width" secondItem="RNq-aM-Y0w" secondAttribute="width" id="r0N-JZ-esh"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VAo-3s-X9N" secondAttribute="bottom" id="67B-xw-Pbm"/>
                                     <constraint firstItem="T74-tf-Bc1" firstAttribute="height" secondItem="zlJ-ZH-xaX" secondAttribute="height" multiplier="1/2" id="9n5-Zh-V5D"/>
+                                    <constraint firstAttribute="trailing" secondItem="VAo-3s-X9N" secondAttribute="trailing" id="H6S-o1-57e"/>
+                                    <constraint firstItem="VAo-3s-X9N" firstAttribute="leading" secondItem="zlJ-ZH-xaX" secondAttribute="leading" id="WSN-A3-Nmf"/>
                                     <constraint firstAttribute="trailing" secondItem="T74-tf-Bc1" secondAttribute="trailing" id="ZYN-bj-HP0"/>
                                     <constraint firstItem="T74-tf-Bc1" firstAttribute="top" secondItem="zlJ-ZH-xaX" secondAttribute="top" id="nKe-Nj-2D1"/>
+                                    <constraint firstItem="VAo-3s-X9N" firstAttribute="height" secondItem="zlJ-ZH-xaX" secondAttribute="height" multiplier="1/2" id="uak-Bs-pLp"/>
                                     <constraint firstItem="T74-tf-Bc1" firstAttribute="leading" secondItem="zlJ-ZH-xaX" secondAttribute="leading" id="yIW-Kp-kyK"/>
                                 </constraints>
                             </view>
@@ -95,7 +129,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Snow" width="37" height="37"/>
         <image name="Sun" width="518" height="505"/>
         <image name="background" width="1280" height="480"/>
+        <image name="shower" width="37" height="37"/>
+        <image name="thunder" width="37" height="37"/>
     </resources>
 </document>
